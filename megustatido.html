@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consejos para el cuidado de computadoras y enlaces útiles.">
+    <title>Cuidado de Computadoras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #007BFF;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Proyecto Lince (Promoviendo el desarrollo y correcto mantenimiento de equipos)</h1>
+    </header>
+    <nav>
+        <a href="https://support.microsoft.com/es-es/windows/mantener-seguro-tu-equipo-en-casa-c348f24f-a4f0-de5d-9e4a-e0fc156ab221" target="_blank">Guía de mantenimiento</a>
+        <a href="https://www.youtube.com/watch?v=y6z0Tq1a8fs" target="_blank">Video Tutorial</a>
+        <a href="https://www.adslzone.net/listas/mejores-programas/limpiar-pc/" target="_blank">Soporte Técnico</a>
+    </nav>
+    <section>
+        <h2> Consejos para el Cuidado de Computadoras
+        <h2>Recomendaciones Generales</h2>
+        <ul>
+            <li>Mantén tu computadora limpia y libre de polvo.</li>
+            <li>Evita comer o beber cerca del equipo.</li>
+            <li>Actualiza regularmente tu sistema operativo y antivirus.</li>
+            <li>Realiza copias de seguridad de tus archivos importantes.</li>
+            <li>No sobrecargues la batería y usa una base refrigerante si es necesario.</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Cuidado de Computadoras | Todos los derechos reservados.</p>
+    </footer>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Código QR</title>
+    <!-- Script de QRCode.js desde una CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <h1>Generador de Código QR</h1>
+
+    <!-- Input para introducir el link -->
+    <label for="link">Introduce tu enlace:</label>
+    <input type="text" id="link" placeholder="https://www.ejemplo.com">
+    <button onclick="generarQR()">Generar Código QR</button>
+
+    <!-- Contenedor donde se mostrará el código QR -->
+    <div id="codigoQR"></div>
+
+    <script>
+        // Función para generar el QR
+        function generarQR() {
+            var enlace = document.getElementById('link').value;
+            var contenedor = document.getElementById('codigoQR');
+
+            // Limpiar el contenedor antes de generar un nuevo código QR
+            contenedor.innerHTML = "";
+
+            // Generar el código QR
+            var qr = new QRCode(contenedor, {
+                text: enlace,
+                width: 128,
+                height: 128
+            });
+        }
+    </script>
+
+</body>
+</html>
